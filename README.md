@@ -59,9 +59,9 @@ $ sudo apt install sway swaybg swayidle alacritty fish waybar grim slurp bemenu
 ```
 
 ### Installing the font
-The configuration uses the [Fira Code](https://github.com/tonsky/FiraCode) font. You can
-download it from [here](https://github.com/tonsky/firacode/releases/latest). After you
-have downloaded and unzipped the file, run the following command to install it:
+The configuration uses the [Iosevka](https://github.com/be5invis/Iosevka) font. You can
+download it from [here](https://github.com/be5invis/Iosevka/releases/tag/latest). After
+you have downloaded and unzipped the file, run the following command to install it:
 ```bash
 $ mv *.ttf /usr/share/fonts/TTF
 ```

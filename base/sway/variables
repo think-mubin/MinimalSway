@@ -1,5 +1,5 @@
 # setting the font used by sway(e.g. in title bars)
-font fira code medium 12
+font iosevka medium 12
 
 # this is the key used with other keys to control sway. you can change it to your
 # preference.
