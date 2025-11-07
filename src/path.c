@@ -6,15 +6,15 @@
 static int path_get_name_count(const char *path)
 {
     bool in_path_name = false;
-    size_t len = strlen(path);
-    size_t cnt  0;
-    for (size_t i = 0; i < len; i++)
+    size_t length = strlen(path);
+    size_t count = 0;
+    for (size_t i = 0; i < length; i++)
     {
         if (path[i] != '/')
         {
             if (!in_path_name)
             {
-                cnt++;
+                count++;
             }
             in_path_name = true;
         }
@@ -23,7 +23,7 @@ static int path_get_name_count(const char *path)
             in_path_name = false;
         }
     }
-    return cnt;
+    return count;
 }
 
 static char *path_get_up_to_index(const char *path, int index)
