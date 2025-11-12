@@ -26,23 +26,25 @@ if set -ql _flag_help; or set -ql _flag_usage; or not set -ql _flag_theme; \
 end
 
 for config in (/bin/ls $base_dir)
-    if test -d $config_dir/{$config}_backup
-        rm -fr $config_dir/{$config}_backup
-    end
     if test -d $config_dir/$config
-        mv $config_dir/$config $config_dir/{$config}_backup
+        rm -fr $config_dir/$config/*
+    else
+        mkdir -p $config_dir/$config
     end
-    mkdir $config_dir/$config
     cp -r $base_dir/$config/* $config_dir/$config/
 end
+
+set -l base_dir_items
+for items in (/bin/ls $base_dir)
+    set -a base_dir_items $items
+end
+
 for config in (/bin/ls $themes_dir/$_flag_theme)
-    if not test -d $config_dir/$config
-        mkdir $config_dir/$config
-        cp -r $themes_dir/$_flag_theme/$config/* $config_dir/$config/
-        continue
-    end
-    if not test -f $config_dir/$config/minimal_wm_config_sign
-        mv $config_dir/$config $config_dir/{$config}_backup
+    if test -d $config_dir/$config
+        if not contains $config $base_dir_items
+            rm -fr $config_dir/$config/*
+        end
+    else
         mkdir $config_dir/$config
     end
     cp -r $themes_dir/$_flag_theme/$config/* $config_dir/$config/
