@@ -6,16 +6,16 @@
 # despite the name, also works for non-floating windows.
 
 # start a terminal. you can change the terminal in variables file.
-bindsym $mod+Return exec $term
+bindsym $mod+return exec $term
 
 # kill focused window.
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start your launcher.
 bindsym $mod+d exec $menu
 
 # take screenshot.
-bindsym $mod+x exec $config_path/screenshot.sh
+bindsym $mod+s exec $config_path/screenshot.sh
 
 # change normal to inverse to use left mouse button for resizing and
 # right mouse button for dragging.
@@ -24,5 +24,5 @@ floating_modifier $mod normal
 # reload the configuration file.
 bindsym $mod+c reload
 
-# exit sway (logs you out of your Wayland session).
+# exit sway (logs you out of your wayland session).
 bindsym $mod+m exec swaymsg exit
