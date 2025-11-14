@@ -5,7 +5,7 @@
     min-height: 0;
     font-family: "iosevka";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
 }
 
@@ -17,15 +17,16 @@ window#waybar
 
 #clock, #pulseaudio, #network, #tray, #battery
 {
-    margin: 8px 16px 8px 0px;
-    padding: 2px 0px 2px 0px;
-    color: #b3976d;
+    margin: 8px 8px 8px 0px;
+    padding: 2px 8px 2px 8px;
+    color: #1b140a;
+    background-color: #b3976d;
+    border: 2px solid #8c734e;
 }
 
 #workspaces
 {
     margin: 8px 0px 8px 16px;
-    color: #b3976d;
 }
 
 #workspaces button
