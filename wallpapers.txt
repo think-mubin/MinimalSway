@@ -3,4 +3,5 @@ This file contains all the wallpaper used in screenshots and more:
 1. Download Link: https://www.pexels.com/photo/a-field-of-daisies-with-yellow-flowers-17359682/
    Edit command: gowall convert <wallpaper-path> -t gruvbox
 
-
+2. Direct Download Link: https://wallpaperaccess.com/download/ocean-painting-3609458
+   Edit command: gowall convert <wallpaper-path> -t gruvbox
